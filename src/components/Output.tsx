@@ -12,6 +12,7 @@ import Themes from "./commands/Themes";
 import { OutputContainer, UsageDiv } from "./styles/Output.styled";
 import { termContext } from "./Terminal";
 import { useContext } from "react";
+import Projects from "./commands/Projects";
 
 type Props = {
   index: number;
@@ -45,6 +46,7 @@ const Output: React.FC<Props> = ({ index, cmd }) => {
           welcome: <Welcome />,
           whoami: <GeneralOutput>visitor</GeneralOutput>,
           'کمک': <Help lang="fa" />,
+          'projects': <Projects />
         }[cmd]
       }
     </OutputContainer>

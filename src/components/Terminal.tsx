@@ -42,6 +42,8 @@ export const commands: Command = [
   { cmd: "themes", desc: "check available themes", tab: 7 },
   { cmd: "welcome", desc: "display hero section", tab: 6 },
   { cmd: "whoami", desc: "about current user", tab: 7 },
+  { cmd: "projects", desc: "show list of my recent projects", tab: 5 },
+  { cmd: "certs", desc: "show my certifications", tab: 8 },
 
 ];
 
