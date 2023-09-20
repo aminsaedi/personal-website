@@ -121,13 +121,13 @@ export const argTab = (
   }
 
   // 5) if input is 'projects' or 'socials'
-  else if (inputVal === "projects " || inputVal === "socials ") {
+  else if (inputVal === "projects " || inputVal === "socials " || inputVal === "certs ") {
     setInputVal(`${inputVal}go`);
     return [];
   }
 
   // 6) if input is 'projects g' or 'socials g'
-  else if (inputVal === "projects g" || inputVal === "socials g") {
+  else if (inputVal === "projects g" || inputVal === "socials g" || inputVal === "certs g") {
     setInputVal(`${inputVal}o`);
     return [];
   }
@@ -145,6 +145,18 @@ export const argTab = (
     [
       "1.Ghost Automation",
       "2.Hiddify Configurator",
+    ].forEach(t => {
+      hintsCmds = [...hintsCmds, t];
+    });
+    return hintsCmds;
+  }
+
+
+  // 8) if input is 'certs go '
+  else if (_.startsWith(inputVal, "certs go ")) {
+    [
+      "1.LPIC-1 Linux Administrator",
+      "2.LPIC-2 Linux Engineer",
     ].forEach(t => {
       hintsCmds = [...hintsCmds, t];
     });

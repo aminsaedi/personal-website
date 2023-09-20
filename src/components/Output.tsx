@@ -13,6 +13,7 @@ import { OutputContainer, UsageDiv } from "./styles/Output.styled";
 import { termContext } from "./Terminal";
 import { useContext } from "react";
 import Projects from "./commands/Projects";
+import Certifications from "./commands/Certifications";
 
 type Props = {
   index: number;
@@ -22,7 +23,7 @@ type Props = {
 const Output: React.FC<Props> = ({ index, cmd }) => {
   const { arg } = useContext(termContext);
 
-  const specialCmds = ["projects", "socials", "themes", "echo"];
+  const specialCmds = ["projects", "socials", "themes", "echo", "certs"];
 
   // return 'Usage: <cmd>' if command arg is not valid
   // eg: about tt
@@ -45,8 +46,9 @@ const Output: React.FC<Props> = ({ index, cmd }) => {
           themes: <Themes />,
           welcome: <Welcome />,
           whoami: <GeneralOutput>visitor</GeneralOutput>,
-          'کمک': <Help lang="fa" />,
-          'projects': <Projects />
+          کمک: <Help lang="fa" />,
+          projects: <Projects />,
+          certs: <Certifications />,
         }[cmd]
       }
     </OutputContainer>
