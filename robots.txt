@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /  # Disallow all directories and files
+Allow: /$  # Allow the main index page
+
+Sitemap: https://aminsaedi.bio/sitemap.xml  # Optional: Specify the location of your sitemap
